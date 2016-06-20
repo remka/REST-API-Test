@@ -1,0 +1,65 @@
+<%- include('./partials/header'); %>
+
+<div class="container">
+
+  <h1>API documentation</h1>
+
+  <div>
+    <h2>Introduction</h2>
+    <p>
+      No authentication is required to query and get data, but you will need to be authenticated to POST, PUT or DELETE any existing data.
+    </p>
+  </div>
+
+  <div>
+
+    <h2>GET - Reading Data</h2>
+
+    <div>
+      <h3>All burgers</h3>
+      <p>
+        Get a list of all burgers.
+      </p>
+      <pre><code>http://localhost:8080/api/burgers</code></pre>
+    </div>
+
+  </div>
+
+  <div>
+    <h2>Registration</h2>
+    <h3>Query</h3>
+    <p>
+      With <code>email</code> and <code>password</code> passed as <code>POST</code> values.
+    </p>
+    <pre><code>http://localhost:8080/api/auth/register</code></pre>
+    <h3>Returns</h3>
+    <pre><code>HTTP/1.0 200 OK
+Content-Type: application/json
+{
+  "success": true,
+  "message": "Successfully created new user."
+}
+    </code></pre>
+  </div>
+
+  <div>
+    <h2>Authentification</h2>
+    <h3>Query</h3>
+    <p>
+      With <code>email</code> and <code>password</code> passed as <code>POST</code> values.
+    </p>
+    <pre><code>http://localhost:8080/api/auth/login</code></pre>
+    <h3>Returns</h3>
+    <pre><code>HTTP/1.0 200 OK
+Content-Type: application/json
+{
+  "success": true,
+  "token": "JWT e6JhbGcerIEt8NifsInL...."
+}
+    </code></pre>
+  </div>
+
+</div>
+
+
+<%- include('./partials/footer'); %>
