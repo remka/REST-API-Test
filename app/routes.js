@@ -108,16 +108,31 @@ module.exports = function(app, passport) {
   apiRoutes.post('/burgers', passport.authenticate('jwt', { session: false }), function(req, res) {
 
     var burger = new Burger();
-        chat.from = req.user._id;
-        chat.to = req.body.to;
-        chat.message_body = req.body.message_body;
+
+        burger.userId = req.user._id;
+        burger.nameRomaji  = req.body.nameRomaji;
+        burger.nameJapanese = req.body.nameJapanese;
+        burger.location = [req.body.location.long, req.body.location.lat];
+        burger.address_1 = req.body.address_1;
+        burger.address_2 = req.body.address_2;
+        burger.address_3 = req.body.address_3;
+        burger.city = req.body.city;
+        burger.county_province = req.body.county_province;
+        burger.zip = req.body.zip;
+        burger.region = req.body.region;
+        burger.country = req.body.country;
+        burger.address_other = req.body.address_other;
+        burger.hasNonSmoker = req.body.hasNonSmoker;
+        burger.hasVegetarian = req.body.hasVegetarian;
+        burger.takesReservations = req.body.takesReservations;
+        burger.isHidden = req.body.isHidden;
 
         // Save the chat message if there are no errors
-        chat.save(function(err) {
+        burger.save(function(err) {
             if (err)
                 res.send(err);
 
-            res.json({ message: 'Message sent!' });
+            res.json({ message: 'Burger saved!' });
         });
   });
 
