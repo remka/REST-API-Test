@@ -17,7 +17,7 @@ $(function() {
   var sendQuery = function(query) {
 
     $.getJSON( query, function(data) {
-      data = JSON.stringify(data);
+      data = JSON.stringify(data, null, 2);
       console.log(data);
       $('#api-response').val(data);
     });
