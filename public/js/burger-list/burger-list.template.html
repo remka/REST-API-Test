@@ -15,7 +15,14 @@
 <div class="row">
   <ul>
     <li ng-repeat="burger in $ctrl.burgers | filter:$ctrl.query | orderBy:$ctrl.orderProp">
-      <span>{{burger.name}}</span>
+      <!--
+      <a href="#/burgers/{{burger.id}}" class="thumb">
+        <img ng-src="{{burger.imageUrl}}" alt="{{burger.name}}" />
+      </a>
+      -->
+      <span>
+        <a href="#/burgers/{{burger.id}}">{{burger.name}}</a>
+      </span>
       <p>{{burger.snippet}}</p>
     </li>
   </ul>
