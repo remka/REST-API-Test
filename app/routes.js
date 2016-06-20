@@ -29,6 +29,12 @@ module.exports = function(app, passport) {
     });
   });
 
+  app.get('/burgers', function(req, res) {
+    res.render('../app/views/burgers.ejs', {
+      nav_name: 'nav_burgers'
+    });
+  });
+
   app.get('/apidoc', function(req, res) {
     res.render('../app/views/apidoc.ejs', {
       nav_name: 'nav_apidoc'
