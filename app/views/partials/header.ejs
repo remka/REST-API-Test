@@ -1,12 +1,13 @@
 <!doctype html>
-<html ng-app>
+<html ng-app="tokyoBurgerMapApp">
 <head>
   <title>Site name</title>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.min.js"></script>
+  <script src="/js/app.js"></script>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
   <link rel="stylesheet" href="/css/style.css">
 </head>
-<body class="<%= nav_name %>">
+<body class="<%= nav_name %>" ng-controller="BurgerListController">
 
 <%- include('./navigation'); %>
