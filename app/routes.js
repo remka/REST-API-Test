@@ -94,6 +94,11 @@ module.exports = function(app, passport) {
   });
 
   // POST to create a new message from the authenticated user
+  apiRoutes.get('/burgers', function(req, res) {
+    res.json({ message: 'All burgers here!' });
+  });
+
+  // POST to create a new message from the authenticated user
   apiRoutes.post('/burgers', passport.authenticate('jwt', { session: false }), function(req, res) {
 
     var burger = new Burger();
