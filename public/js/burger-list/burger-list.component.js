@@ -2,25 +2,25 @@
 angular.
   module('burgerList').
   component('burgerList', {
-  template:
-      '<ul>' +
-        '<li ng-repeat="burger in $ctrl.burgers">' +
-          '<span>{{burger.name}}</span>' +
-          '<p>{{burger.snippet}}</p>' +
-        '</li>' +
-      '</ul>',
-  controller: function BurgerListController() {
-    this.burgers = [
-      {
-        name: 'Nexus S',
-        snippet: 'Fast just got faster with Nexus S.'
-      }, {
-        name: 'Motorola XOOM™ with Wi-Fi',
-        snippet: 'The Next, Next Generation tablet.'
-      }, {
-        name: 'MOTOROLA XOOM™',
-        snippet: 'The Next, Next Generation tablet.'
-      }
-    ];
-  }
+    templateUrl: 'js/burger-list/burger-list.template.html',
+    controller: function BurgerListController() {
+      this.burgers = [
+        {
+          name: 'Nexus S',
+          snippet: 'Fast just got faster with Nexus S.'
+        }, {
+          name: 'Motorola XOOM™ with Wi-Fi',
+          snippet: 'The Next, Next Generation tablet.'
+        }, {
+          name: 'MOTOROLA XOOM™',
+          snippet: 'The Next, Next Generation tablet.'
+        }, {
+          name: 'Un truc',
+          snippet: 'Oais ca va bon.'
+        }, {
+          name: '浦島太郎',
+          snippet: '日本語でですか？'
+        }
+      ];
+    }
 });

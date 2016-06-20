@@ -1,0 +1,12 @@
+<div class="row">
+  <input type="filter" class="form-control" placeholder="Search" ng-model="$ctrl.query">
+</div>
+
+<div class="row">
+  <ul>
+    <li ng-repeat="burger in $ctrl.burgers | filter:$ctrl.query">
+      <span>{{burger.name}}</span>
+      <p>{{burger.snippet}}</p>
+    </li>
+  </ul>
+</div>
