@@ -2,3 +2,4 @@
 npm-debug.log
 .DS_Store
 /app/main.js
+/app/passport.js
