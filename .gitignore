@@ -1,5 +1,4 @@
 /node_modules
 npm-debug.log
 .DS_Store
-/app/main.js
-/app/passport.js
+/app/config/main.js
